@@ -16,12 +16,7 @@ public class Factory : MonoBehaviour
     {
         return Instantiate(_uiManager, transform).GetComponent<IUIManager>();
     }
-    
-    public IJoystickUIComponent GetJoystickUIComponent()
-    {
-        return Instantiate(_joystickUIComponent, transform).GetComponent<IJoystickUIComponent>();
-    }
-    
+
     public IPlayerController GetPlayerController()
     {
         return Instantiate(_playerController, transform).GetComponent<IPlayerController>();

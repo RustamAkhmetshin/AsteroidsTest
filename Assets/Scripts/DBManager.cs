@@ -10,7 +10,7 @@ public class DBManager : MonoBehaviour, IDBManager
 
     public void SerializeAndSave(List<Level> levels) 
     {
-        Stream stream = File.Open("data.xml", FileMode.Create);
+        Stream stream = File.Open(Application.persistentDataPath +  "data.xml", FileMode.Create);
         
         BinaryFormatter formatter = new BinaryFormatter();
 
@@ -21,9 +21,9 @@ public class DBManager : MonoBehaviour, IDBManager
     
     public List<Level> DeserializeAndLoad() 
     {
-        if (File.Exists("data.xml"))
+        if (File.Exists(Application.persistentDataPath +  "data.xml"))
         {
-            Stream stream = File.Open("data.xml", FileMode.Open);
+            Stream stream = File.Open(Application.persistentDataPath +  "data.xml", FileMode.Open);
 
             BinaryFormatter formatter = new BinaryFormatter();
             

@@ -57,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                    Unsubscribe();
                    
-                   Observable.Timer (System.TimeSpan.FromSeconds (3))
+                   Observable.Timer (System.TimeSpan.FromSeconds (5f))
                        .Subscribe (__ =>
                        {
                            Root.LevelManager.Win();

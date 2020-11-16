@@ -10,7 +10,6 @@ public class Root : MonoBehaviour
     private bool _initialized;
     
     private IUIManager _uiManager;
-    private IJoystickUIComponent _joystickUiComponent;
     private IPlayerController _playerController;
     private IPool _bulletPool;
     private ILevelManager _levelManager;
@@ -44,12 +43,7 @@ public class Root : MonoBehaviour
     {
         get { return _instance._uiManager = _instance._uiManager ?? _factory.GetUIManager(); }
     }
-    
-    public static IJoystickUIComponent JoystickUiComponent
-    {
-        get { return _instance._joystickUiComponent = _instance._joystickUiComponent ?? _factory.GetJoystickUIComponent(); }
-    }
-    
+
     public static IPlayerController PlayerController
     {
         get { return _instance._playerController = _instance._playerController ?? _factory.GetPlayerController(); }

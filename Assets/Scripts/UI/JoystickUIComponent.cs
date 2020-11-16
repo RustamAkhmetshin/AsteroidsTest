@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//обернуть в общий InputManager
 public class JoystickUIComponent : Window, IJoystickUIComponent
 {
     public event Action OnTouchDown = () => { };
